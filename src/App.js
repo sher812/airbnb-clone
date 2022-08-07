@@ -3,39 +3,29 @@ import './App.css';
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Card from "./components/Card";
+import Data from "./components/Data";
 
 function App() {
+  const dataElements = Data.map(x => {
+    return(
+      <Card 
+        title={x.title}
+        price={x.price}
+        coverImg={x.coverImg}
+        location={x.location}
+        rating={x.stats.rating}
+        reviewCount={x.stats.reviewCount}
+      />
+      )
+  });
+
   return (
     <div className="App">
       <Navbar />
       <Hero />
-      <span className="cards">
-        <Card 
-          img="./images/wedding.jfif"
-          name="wedding"
-          rating="5.0"
-          location="(6) USA"
-          description="Life lessons with Katie Zaferes"
-          pricing={136}
-        />
-        <Card 
-          img="./images/biking.jfif"
-          name="biking"
-          rating="5.0"
-          location="(6) USA"
-          description="Life lessons with Katie Zaferes"
-          pricing={136}
-        />
-        <Card 
-          img="./images/kelly.png"
-          name="kelly"
-          rating="5.0"
-          location="(6) USA"
-          description="Life lessons with Katie Zaferes"
-          pricing={136}
-        />
-      </span>
-
+      <div className="cards">
+        {dataElements}
+      </div>
     </div>
   );
 }
