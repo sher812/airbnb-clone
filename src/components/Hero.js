@@ -1,10 +1,9 @@
 import React from "react";
-import imageGrid from "../images/photo-grid.svg";
 function Hero() {
 
     return(
         <div className="hero">
-            <img src={imageGrid} alt="image-grid" className="image-grid" />
+            <img src="../images/photo-grid.svg" alt="image-grid" className="image-grid" />
             <span className="hero-text">
                 <h1> Online Experiences </h1>
                 <p>

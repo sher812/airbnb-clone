@@ -6,6 +6,11 @@ html, body {
   padding: 0;
 }
 
+.App {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
 .navbar {
   display: flex;
   align-items: center;
@@ -45,6 +50,47 @@ html, body {
   margin: 0px;
 }
 
+.cards {
+  align-self: center;
+  margin-top: 32px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 16px;
+  /* padding-left: 4.5%; */
+}
+
+.card {
+  width: 250px;
+  padding: 8px;
+}
+
+.profile-pic {
+  width: 100%;
+  border-radius: 9px;
+}
+
+.rating {
+  display: flex;
+  gap: 8px;
+}
+
+.rating > p {
+  margin: 0px;
+  padding: 0px;
+}
+
+.rating > p + p {
+  color: #918E9B;
+}
+
+.details > p {
+  margin: 0px;
+  padding: 0px;
+}
+
+/* Responsive CSS */
+
 @media only screen and (max-width: 1000px) {
   .hero {
     flex-direction: column;
@@ -53,5 +99,11 @@ html, body {
     align-items: center;
     
     margin-left: 0px;
+  }
+
+  .cards {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 }
